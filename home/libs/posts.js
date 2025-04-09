@@ -1,5 +1,5 @@
 var posts = [
-    { imgPath: "images/projects/experiment1.jpg",  link: "http://domenicobrz.github.io/webgl/projects/experiment1/", description: "", tags: ["webgl", "threejs"] },
+    // { imgPath: "images/projects/experiment1.jpg",  link: "http://domenicobrz.github.io/webgl/projects/experiment1/", description: "", tags: ["webgl", "threejs"] },
     { imgPath: "images/projects/blurryspider.jpg",  link: "https://domenicobrz.github.io/webgl/projects/blurry-web-spider/", description: "", tags: ["webgl", "threejs"] },
     { imgPath: "images/projects/doflines.jpg",  link: "http://domenicobrz.github.io/webgl/projects/DOF lines/", description: "", tags: ["webgl", "threejs"] },
     { imgPath: "images/projects/ssgi.jpg",  link: "http://domenicobrz.github.io/webgl/projects/SSGI/", description: "", tags: ["threejs", "webgl"] },
