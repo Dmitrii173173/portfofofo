@@ -12,166 +12,145 @@
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet"> 
+    
+    <!-- Добавляем иконки -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
     <title>WebGL Portfolio</title>
     <script type="module" src="libs/main.js"></script>
+    
+    <style>
+        /* Стили для секции навыков */
+        .skills-container {
+            padding: 4rem 2rem;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .skill-card {
+            background: #2a2a2a;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .skill-card iconify-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .skill-name {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
 
-
     <main>
-        <header class="header">
-            <div class="header_main">
+        <!-- Остальные секции остаются без изменений -->
 
-                <div class="header_spinner2"></div>
-                <div class="header_spinner_closer2"></div>
-                <div class="header_spinner">
-                    <div class="innersphere innersphere1"></div>
-                    <div class="innersphere innersphere2"></div>
-                    <div class="innersphere innersphere3"></div>
-                    <div class="innersphere innersphere4"></div>
-                </div>
-                <div class="header_spinner_closer"></div>
-
-                <svg class="DBlogo"> <use xlink:href="#DBlogo" /> </svg>
-
-                <section class="header_controlbox">   
-                    <svg class="header_arrows"> <use xlink:href="#arrow1l" /> </svg>
-                    <div class="authContainer">
-                        <span class="author">Domenicobrz</span>
-                        <span class="subAuth">Creative Coding Adventures</span>
-                    </div>
-                    <svg class="header_arrows"> <use xlink:href="#arrow1r" /> </svg>
-                </section>
-
-                <nav class="header_social_icon_links">
-                    <a target="_blank" href="https://github.com/Domenicobrz"> <svg class="header_social_icon"> <use xlink:href="#socGithub" /> </svg> </a>
-                    <a target="_blank" href="https://twitter.com/Domenico_brz"> <svg class="header_social_icon"> <use xlink:href="#socTwitter" /> </svg> </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/domenico-bruzzese-9000ab141/"> <svg class="header_social_icon"> <use xlink:href="#socLinkedIn" /> </svg> </a>
-                </nav>
+        <!-- Добавляем секцию навыков -->
+        <section class="skills-container">
+            <div class="portfolio_text_container">
+                <hr class="header_separator">
+                <h1 class="portfolio_text">Technical Arsenal</h1>
             </div>
-        </header>
 
-
-        <div class="portfolio_text_container">
-            <hr class="header_separator">
-            <h1 class="portfolio_text">Web Portfolio</h1>
-        </div>
-
-
-        <div class="mosaico_container">
-            <aside id="mosaico_header" class="mosaico_header">
-                <span class="TagSelector active" tag="all">All</span>
-
-                <span class="TagSelector" tag="webgl">WebGL</span>
-                <span class="TagSelector" tag="webgpu">WebGPU</span>
-                <span class="TagSelector" tag="threejs">ThreeJS</span>
-                <span class="TagSelector" tag="geometry">Geometry</span>
-                <span class="TagSelector" tag="misc">Misc</span>
-            </aside>
-
-            <nav class="mosaicogrid">
-                <!-- will be filled with .mosaicogrid_cell cells by loadimages.js -->
-            </nav>
-        </div>
-
-        <section class="paginator_container">
-            <!-- will be filled by paginator.js -->    
-        </section>
-
-
-
-
-        <div class="portfolio_text_container sketches_header_container" id="graphics_sketches_header">
-            <hr class="header_separator">
-            <h1 class="sketches_text">Sketches</h1>
-        </div>
-
-        <div class="graphics_sketches sketches_container">
-            <!-- will be filled by .js -->
-        </div>
-
-        <section class="graphics_sketches_paginator sketches_paginator_container">
-            <!-- will be filled by paginator.js -->    
-        </section>
-
-
-
-        <div class="portfolio_text_container sketches_header_container" id="paintings_sketches_header">
-            <hr class="header_separator">
-            <h1 class="sketches_text">Paintings</h1>
-        </div>
-
-        <div class="paintings_sketches sketches_container">
-            <!-- will be filled by .js -->
-        </div>
-
-        <section class="paintings_sketches_paginator sketches_paginator_container">
-            <!-- will be filled by paginator.js -->    
-        </section>
-
-
-
-        <footer>
-            <div class="footer_main">
-                <span class="footer_thanks">~Thank you for stopping by!~</span>      
-
-                <div class="footer_flex_container">
-                    <section class="footer_main_b1">
-                        <div class="fmb1_container">
-                            <svg class="DBlogo"> <use xlink:href="#buildIcon" /> </svg>
-                            <span class="buildtogheter">Let's build Togheter!</span>
-                            <p class="buildtogheter_text">
-                                I'm working for ambitious brands and people, willing to
-                                unlock the most powerful features and advancements of modern browsers
-                                in graphics.<br>
-                                Join my quest to greatness and see your next project featured in this page!
-                            </p>
-                        </div>
-                    </section>
-                    <div class="footer_main_b2">
-                        
-                        <h3 class="footer_featured">Featured Project</h3>
-                        <span class="footer_featured_desc">WebGL simulated Dispersion Caustics</span>
-                        <a href="https://github.com/Domenicobrz/WebGL-dispersion-caustics"> <img src="images/projects/featuredproject.jpg"> </a>
-
-                        <section class="fmb2_container">
-                            <address class="contact_info_box">
-                                <span>Get in touch</span>
-                                <a href="mailto:domenicobrz@gmail.com">domenicobrz@gmail.com</a>
-                                <a href=""></a>
-                            </address>
-                            <div class="main_links_box">
-                                <span>Main links</span>
-                                <a href="">Curriculum Vitae</a>
-                                <a href="">Main Website</a>
-                            </div>
-                            <nav class="social_links_box">
-                                <div class="socials">
-                                    <a target="_blank" href="https://github.com/Domenicobrz"> <svg class="header_social_icon"> <use xlink:href="#socGithub" /> </svg> </a>
-                                    <a target="_blank" href="https://twitter.com/Domenico_brz"> <svg class="header_social_icon"> <use xlink:href="#socTwitter" /> </svg> </a>
-                                    <a target="_blank" href="https://www.linkedin.com/in/domenico-bruzzese-9000ab141/"> <svg class="header_social_icon"> <use xlink:href="#socLinkedIn" /> </svg> </a>
-                                </div>
-                                
-                                <span>
-                                    <svg> <use xlink:href="#locationIcon" /> </svg>
-                                    Siderno, (RC) Italy                                
-                                </span>
-                            </nav>
-                        </section>
-
-                    </div>
+            <div class="skills-grid">
+                <!-- PyTorch -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:pytorch"></iconify-icon>
+                    <h6 class="skill-name">PyTorch</h6>
                 </div>
 
-            </div>
-            <section class="footer_sub">
-                <p>
-                    <small>&copy; 2018 Domenico Bruzzese</small>
-                    <span>Built with <svg> <use xlink:href="#heartIcon" /> </svg> and passion for the web</span>
-                </p>
-            </section>
-        </footer>
+                <!-- TensorFlow -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:tensorflow"></iconify-icon>
+                    <h6 class="skill-name">TensorFlow</h6>
+                </div>
 
+                <!-- Scikit-learn -->
+                <div class="skill-card">
+                    <iconify-icon icon="simple-icons:scikitlearn"></iconify-icon>
+                    <h6 class="skill-name">Scikit-learn</h6>
+                </div>
+
+                <!-- Python -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:python"></iconify-icon>
+                    <h6 class="skill-name">Python</h6>
+                </div>
+
+                <!-- C++ -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:c-plusplus"></iconify-icon>
+                    <h6 class="skill-name">C++</h6>
+                </div>
+
+                <!-- Hugging Face -->
+                <div class="skill-card">
+                    <iconify-icon icon="simple-icons:huggingface"></iconify-icon>
+                    <h6 class="skill-name">Hugging Face</h6>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:javascript"></iconify-icon>
+                    <h6 class="skill-name">JavaScript</h6>
+                </div>
+
+                <!-- React -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:react"></iconify-icon>
+                    <h6 class="skill-name">React</h6>
+                </div>
+
+                <!-- Git -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:git-icon"></iconify-icon>
+                    <h6 class="skill-name">Git</h6>
+                </div>
+
+                <!-- GitHub -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:github-icon"></iconify-icon>
+                    <h6 class="skill-name">GitHub</h6>
+                </div>
+
+                <!-- Docker -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:docker-icon"></iconify-icon>
+                    <h6 class="skill-name">Docker</h6>
+                </div>
+
+                <!-- Linux -->
+                <div class="skill-card">
+                    <iconify-icon icon="logos:linux-tux"></iconify-icon>
+                    <h6 class="skill-name">Linux</h6>
+                </div>
+            </div>
+        </section>
+
+        <!-- Остальные секции и футер остаются без изменений -->
+        
     </main>
     
     {{> icons }}

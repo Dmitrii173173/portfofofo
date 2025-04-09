@@ -38,7 +38,7 @@ const Skills = () => {
     <Element name="Skills" id="skills">
       <section className="section py-5">
         <Container>
-          <Title size="h2" text="Навыки" />
+          <Title size="h2" text="Skills" />
           <motion.div
             variants={containerVariants}
             initial="hidden"
